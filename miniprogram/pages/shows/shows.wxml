@@ -1,0 +1,19 @@
+<view class="container">
+  <view class="card" wx:for="{{cardList}}" wx:for-item="item" wx:for-index="item.id">
+    <view class="title">
+      <view>{{item.inc}}</view>
+      <view style="white-space: nowrap;display:flex; flex-direction: row;"> 
+        <view  class="briage" style="margin-right:10rpx">可信度:{{item.kexin}}</view>
+        <view class="briage">{{item.class}}</view>
+      </view>
+    </view>
+    <view class="body">
+      <view>总包{{item.price}}W</view>
+      <view>{{item.type}}</view>
+    </view>
+    <view class="footer">
+      <view style="display: flex;flex-direction: row;align-items: center;"><image style="width:30rpx; height:30rpx;margin-right:10rpx" src="../../images/GPS.png" />{{item.city}}</view>
+      <view style="display: flex;flex-direction: row;align-items: center;">详细<image style="margin-left:10rpx;width: 30rpx; height:30rpx;" src="../../images/arrowRight.png" /></view>
+    </view>
+  </view>
+</view>

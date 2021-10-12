@@ -1,0 +1,21 @@
+<view class="content">
+  <view  class="card" wx:for="{{list}}" wx:for-item="item" wx:for-key="item.id"
+  style="margin-right: 24rpx; margin-top:10rpx;margin-bottom: 14rpx;">
+    <view class="header" style="padding-left: 24rpx;padding-right: 24rpx;border-bottom: black 1rpx;">
+      <view>{{item.inc}}</view>
+      <view>{{item.update}}</view>
+    </view>
+    <view class="body">
+      <view class="type">
+        <view>{{item.station}}</view>
+        <view>{{item.type}}</view>
+      </view>
+      <view class="pre">
+        <view style="margin-bottom: 10rpx;">进度:</view>
+        <view> <icon type="success" /> 简历筛选</view>
+        <view> <icon type="success" /> 笔试</view>
+        <view> <icon type="success" /> 一面</view>
+      </view>
+    </view>
+  </view>
+</view>

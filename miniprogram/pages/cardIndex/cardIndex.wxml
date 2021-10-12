@@ -1,0 +1,139 @@
+<view class="content">
+  <view
+    wx:for="{{tableData}}"
+    wx:key="id"
+    wx:for-item="item"
+  >
+    <scroll-view scroll-x="true" data-index="{{index}}" style="width:650rpx;white-space: nowrap;" bindscroll="scroll" lower-threshold="lowerDown" scroll-left="{{item.scrollLeft}}">
+       <view style="width: 500px;padding-bottom: 10px;">
+        <view style="opacity: {{item.opacity}};" class="card test">
+          <view class="header">
+          <view>{{ item.inc}}</view>
+          <view>commented on{{ item.lastTime }}</view>
+        </view>
+        <view 
+          data-item="{{item}}"
+          class="body padding"
+          bindtap="toDetail"
+        >
+          <view 
+            style="display: flex;flex-direction: row;justify-content: space-between;"
+          >
+            <view>{{item.station}}</view>
+            <view wx:if="{{item.type}}=0">
+            实习
+            </view>
+            <view wx:elif="{{item.type}}=1">
+            校招
+            </view>
+            <view wx:elif="{{item.type}}=2">
+            社招
+            </view>
+          </view>
+          <view style="margin-top:10rpx">
+            进度：
+            <view
+              wx:for="{{item.process}}"
+              wx:for-item="pro"
+              wx:key = "index"
+              style="display:flex;margin-top:10rpx"
+            >
+              <icon type="success" size="18"/> 
+                <view style="margin-left:20rpx">{{pro}}</view>
+            </view>
+          </view>
+        </view>
+        <view class="footer padding">
+          <view>{{item.test}}</view>
+        </view>
+        </view>
+       </view>
+    </scroll-view>
+  </view>
+  <view
+    bindtap="showModal"
+    class="addButton button"
+    style="background-color: rgb(95, 214, 95);"
+    data-target="Modal"
+  >
+  ➕
+  </view>
+  <view class="cu-modal {{modalName=='Modal'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end" style="display: flex;justify-content: space-between;padding-right:15rpx;padding-left: 36rpx;border-bottom: 1rpx solid rgb(160, 158, 158);">
+      <view class="content">增加流程</view>
+      <view bindtap="hideModal">
+        <text>❌</text>
+      </view>
+    </view>
+    <view style="display: flex;flex-direction: column;">
+     <view class='form-item'>
+        <view>公司：</view>
+        <input 
+          value="{{addInc}}" 
+          data-modal='inc'
+          bindinput='handleInputChange'
+          placeholder="请输入公司名称"
+         />
+     </view>
+     <view class='form-item'>
+        <view>职位：</view>
+        <input 
+          value="{{addStation}}" 
+          data-modal='station'
+          bindinput='handleInputChange'
+          placeholder="请输入应聘职位"
+        />
+     </view>
+     <view class='form-item'>
+        <view>部门：</view>
+        <input 
+          value="{{addDepartment}}"
+          data-modal="department"
+          bindinput='handleInputChange'
+          placeholder="请输入应聘部门" 
+      />
+     </view>
+     <view class='form-item'>
+        <view>渠道：</view>
+        <input 
+          value="{{chanel}}"
+          data-modal="chanel"
+          bindinput='handleInputChange'
+          placeholder="请输入投递渠道" 
+      />
+     </view>
+     <view class="radio-item">
+        <view style="margin-bottom: 10rpx;">类型:</view>
+        <radio-group
+          value="{{addType}}"
+          bindchange="selectedRadio"
+          style="margin-bottom: 10rpx;"
+        >
+          <radio
+            value="0"
+          >
+            实习
+          </radio>
+          <radio
+            value="1"
+          >
+           校招
+          </radio>
+          <radio
+            value="2"
+          >
+           社招
+          </radio>
+        </radio-group>
+     </view>
+     <!-- <view class="process-item">
+        <view>流程：</view>
+     </view> -->
+     <view>
+     <button size="mini" type="primary" bindtap="submitCard">提交</button>
+     </view>
+    </view>
+  </view>
+</view>
+</view>

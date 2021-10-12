@@ -1,0 +1,40 @@
+/* pages/shows/shows.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card {
+  width: 650rpx;
+  height: 200rpx;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px grey;
+  margin-top: 10rpx;
+  margin-bottom: 14rpx;
+  padding: 24rpx;
+}
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24rpx;
+}
+.body {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24rpx;
+}
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.briage {
+  background-color: rgb(202, 240, 202);
+  border-radius: 10rpx;
+  padding: 5rpx;
+}

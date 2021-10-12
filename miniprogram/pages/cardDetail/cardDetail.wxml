@@ -1,0 +1,37 @@
+<view class="content" style="margin-top: 10rpx; margin-left:24rpx; margin-right:24rpx; margin-bottom: 24rpx;">
+	<view class="top">
+		<view class='title' style="font-size: 24px;margin-bottom: 24rpx;border-bottom: 1rpx solid rgb(168, 166, 166);">
+			{{inc}}
+		</view>
+	</view>
+	<view class="body">
+		<view style="margin-bottom: 18rpx;">
+			职位：{{station}}
+		</view>
+		<view style="margin-bottom: 18rpx;">
+			部门: {{department}}
+		</view>
+		<view style="margin-bottom: 18rpx;">
+			投递渠道： 公众号
+		</view>
+		<view>
+			<view style="font-size: 24px; border-bottom: 1rpx solid rgb(167, 165, 165);">进度：</view>
+			<view class="process" wx:for="{{process}}" wx:for-item="item" wx:key="index" style="margin-bottom: 18rpx;">
+			<view style="display: flex; flex-direction: row;">
+				<icon type="success_no_circle" color="green" style="margin-right:10rpx"/>
+				{{item}}
+			</view>
+		</view>
+		</view>
+	</view>
+	<view class="record">
+		<view style="font-size: 24px;border-bottom: 1rpx solid rgb(167, 166, 166);">记录：</view>
+		<view style="margin-bottom: 18rpx;">
+			·一面记录
+		</view>
+		<view style="margin-bottom: 18rpx;">
+			·二面记录
+		</view>
+	</view>
+</view>
+

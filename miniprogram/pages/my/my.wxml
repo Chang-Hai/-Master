@@ -1,0 +1,52 @@
+<view class="page-user">
+  <view class='page-header'>
+    <view class='bg'></view>
+    <view class="userinfo">
+      <button class="button-nostyle cell-left"
+        open-type="{{user.info && user.info.nickName ? '' : 'getUserInfo'}}"
+        bindgetuserinfo="handleUserInfo"
+        bindtap="handleUserTap"
+      >
+        <view class="userinfo-avatar btn-opacity">
+          <image class="img" wx:if="{{user.info && user.info.avatarUrl}}" src="{{user.info.avatarUrl}}" mode="aspectFill" />
+          <open-data wx:else type='userAvatarUrl' />
+        </view>
+        <view class='userinfo__right'>
+          <view class="userinfo-nickname">{{user.info.nickName || '匿名用户'}}</view>
+          <view class='userinfo__extra'>这里什么都没有，快去标记啦</view>
+        </view>
+      </button>
+      <view class='actions'>
+        <view class='actions-item btn-opacity' bindtap='toFavMovieList'>
+          <image class='actions-item__icon' src='../../images/flat.png' mode='aspectFit'></image>
+          <view class='actions-item__name'>活动</view>
+        </view>
+        <view class='actions-item btn-opacity' bindtap='toFavCards'>
+          <image class='actions-item__icon' src='../../images/group.png' mode='aspectFit'></image>
+          <view class='actions-item__name'>小队</view>
+        </view>
+        <view class='actions-item btn-opacity'
+          data-url="/pages/github/pages/starred/starred"
+          bindtap="navigate"
+        >
+          <image class='actions-item__icon' src='../../images/start.png' mode='aspectFit'></image>
+          <view class='actions-item__name'>成就</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view style="margin-left: 24rpx;margin-right: 24rpx;margin-top: 48rpx;">
+    <view style="display: flex;flex-direction: row;justify-content: space-between; align-items: center;margin-bottom: 24rpx;">
+      <view style="align-items: center;"><image style="width:35rpx;height:35rpx;" src="../../images/about.png" />关于</view>
+      <view>></view>
+    </view>
+    <view style="display: flex;flex-direction: row;justify-content: space-between; align-items: center;margin-bottom: 24rpx;">
+      <view style="display: flex;flex-direction: row;align-items: center;"><image style="width:35rpx;height: 35rpx;" src="../../images/fadeBack.png" />设置</view>
+      <view>></view>
+    </view>
+    <view style="display: flex;flex-direction: row;justify-content: space-between; align-items: center;margin-bottom: 24rpx;">
+      <view style="display: flex;flex-direction: row;align-items: center;"><image style="width: 35rpx;height: 35rpx;" src="../../images/fadeBack.png" />反馈</view>
+      <view>></view>
+    </view>
+  </view>
+</view>

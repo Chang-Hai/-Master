@@ -1,0 +1,36 @@
+/* pages/share/share.wxss */
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  min-height: 200rpx;
+  width: 650rpx;
+  margin-left: 24rpx;
+  margin-top: 10rpx;
+  margin-bottom: 14rpx;
+  border-radius: 1rem;
+  box-shadow:  0 0 10px grey;
+}
+.header {
+  padding-top: 10rpx;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx #333333 solid;
+}
+.body {
+  display: flex;
+  flex-direction: column;
+  padding: 24rpx;
+}
+.type {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

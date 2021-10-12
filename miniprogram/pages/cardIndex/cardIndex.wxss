@@ -1,0 +1,151 @@
+page {
+  min-height: 100%;
+  background-color: #FFFFFF ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%); */
+  /* justify-content: center; */
+}
+.card {
+	margin: 24rpx;
+  border-radius: 1rem;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 10px #999999;
+}
+.test {
+  width: 600rpx;
+  min-height: 350rpx;
+}
+.header {
+  margin-top: 10rpx;
+  border-bottom: 1rpx #333333 solid;
+  padding-bottom: 10rpx;
+  display: flex;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  padding-left: 24rpx;
+  padding-right: 24rpx;
+  padding-top: 24rpx;
+  align-items: 24rpx;
+  justify-content: space-between;
+
+}
+.body {
+  display: flex;
+  flex-direction: column;
+}
+.padding {
+  padding: 24rpx;
+}
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;	
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  background-color: #007AFF;
+  z-index: 100;
+  box-shadow: 0 0 10px #555555;
+}
+.addButton {
+  position: fixed;
+  bottom: 200rpx;
+  right: 30rpx;
+}
+.bg-white {
+	background-color: var(--white);
+	color: var(--darkGray);
+}
+.nav {
+	white-space: nowrap;
+}
+.text-center {
+	text-align: center;
+}
+.nav .cu-item {
+	height: 90rpx;
+	display: inline-block;
+	line-height: 90rpx;
+	margin: 0 10rpx;
+	padding: 0 20rpx;
+}
+.nav .cu-item.cur {
+	border-bottom: 4rpx solid;
+}
+/* 模态框 */
+.cu-modal {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1110;
+	opacity: 0;
+	outline: 0;
+	text-align: center;
+	-ms-transform: scale(1.185);
+	transform: scale(1.185);
+	backface-visibility: hidden;
+	perspective: 2000rpx;
+	background: rgba(0, 0, 0, 0.6);
+	transition: all 0.3s ease-in-out 0s;
+	pointer-events: none;
+}
+.cu-modal::before {
+	content: "\200B";
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+.cu-modal.show {
+	opacity: 1;
+	transition-duration: 0.3s;
+	-ms-transform: scale(1);
+	transform: scale(1);
+	overflow-x: hidden;
+	overflow-y: auto;
+	pointer-events: auto;
+}
+.cu-dialog {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: auto;
+	margin-right: auto;
+	width: 680rpx;
+	max-width: 100%;
+	background-color: #f8f8f8;
+	border-radius: 10rpx;
+	overflow: hidden;
+}
+
+.cu-bar {
+	display: flex;
+	position: relative;
+	align-items: center;
+	min-height: 100rpx;
+	justify-content: space-between;
+}
+.bg-white {
+	background-color: var(--white);
+	color: var(--darkGray);
+}
+.justify-end {
+	justify-content: flex-end;
+}
+.form-item{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  padding: 10rpx;
+	margin-left: 50rpx;
+	margin-bottom: 10rpx;
+}
+.radio-item{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 50rpx;
+}

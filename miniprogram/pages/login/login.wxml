@@ -1,0 +1,27 @@
+<!--pages/login/login.wxml-->
+<view wx:if="{{canIUse}}">
+  <view style="display: flex;flex-direction: row;justify-content: center;">
+    <view style="display:flex;border-radius:50%;width:300rpx;height:300rpx;margin-top: 200rpx;flex-direction: column;justify-content: center;align-items: center;" >
+    <open-data style="border-radius: 50%;overflow: hidden;"type="userAvatarUrl"></open-data>
+   </view>
+  </view>
+  <view style="margin-top:20rpx;display: flex;flex-direction:column ;justify-content: center;align-items: center;">
+  <view>
+    申请获得以下权限
+  </view>
+  <view style="margin-bottom: 20rpx;">
+    获取你的公开信息（昵称、头像、手机等）
+  </view>
+  <button
+    open-type='getUserInfo'
+    bindgetuserinfo='bindGetUserInfo'
+    type='primary'
+  >
+    授权登录
+  </button>
+  </view>
+
+</view>
+<view wx:else>
+  请升级微信版本
+</view>
